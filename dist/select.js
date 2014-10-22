@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.8.2 - 2014-10-22T17:03:07.486Z
+ * Version: 0.8.2 - 2014-10-22T17:13:54.277Z
  * License: MIT
  */
 
@@ -802,10 +802,10 @@
         }
 
 	      // smart stuff
-	      $document.addEventListener('click', onDocumentClick, true);
+	      document.addEventListener('click', onDocumentClick, true);
 
 	      scope.$on('$destroy', function() {
-		      $document.removeEventListener('click', onDocumentClick, true);
+		      document.removeEventListener('click', onDocumentClick, true);
 	      });
 
         // Move transcluded elements to their correct position in main template

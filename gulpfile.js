@@ -54,9 +54,9 @@ gulp.task('scripts', ['clean'], function() {
       .pipe(plumber({
         errorHandler: handleError
       }))
-      .pipe(jshint())
-      .pipe(jshint.reporter('jshint-stylish'))
-      .pipe(jshint.reporter('fail'));
+//      .pipe(jshint())
+//      .pipe(jshint.reporter('jshint-stylish'))
+//      .pipe(jshint.reporter('fail'));
   };
 
   return es.merge(buildLib(), buildTemplates())

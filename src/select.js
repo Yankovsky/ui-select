@@ -794,10 +794,10 @@
         }
 
 	      // smart stuff
-	      $document.addEventListener('click', onDocumentClick, true);
+	      document.addEventListener('click', onDocumentClick, true);
 
 	      scope.$on('$destroy', function() {
-		      $document.removeEventListener('click', onDocumentClick, true);
+		      document.removeEventListener('click', onDocumentClick, true);
 	      });
 
         // Move transcluded elements to their correct position in main template
