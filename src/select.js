@@ -793,12 +793,12 @@
           }
         }
 
-        // See Click everywhere but here event http://stackoverflow.com/questions/12931369
-        $document.on('click', onDocumentClick);
+	      // smart stuff
+	      document.addEventListener('click', onDocumentClick, true)
 
-        scope.$on('$destroy', function() {
-          $document.off('click', onDocumentClick);
-        });
+	      scope.$on('$destroy', function() {
+		      document.removeEventListener('click', onDocumentClick, true)
+	      });
 
         // Move transcluded elements to their correct position in main template
         transcludeFn(scope, function(clone) {
